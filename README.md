@@ -36,14 +36,13 @@ No JavaScript is authored in this project. The only script tag loads Tailwind at
 
 ```
 PlateauITSite/
-├── CNAME        # "plateauit.com" — custom domain record
 ├── index.html   # The entire website (markup + Tailwind classes)
 └── README.md
 ```
 
 ### A note on `CNAME`
 
-`CNAME` is a **GitHub Pages** artifact left over from the project's original hosting. Cloudflare does not read this file and it has no effect on the current deployment. It is harmless, but can be deleted if the repository is no longer used with GitHub Pages.
+Earlier revisions included a `CNAME` file containing `plateauit.com`, a **GitHub Pages** artifact from the project's original hosting. It has since been removed, as Cloudflare does not read it and the custom domain is configured in Cloudflare DNS instead. The domain record now lives in the Cloudflare dashboard, not in this repository.
 
 ---
 
@@ -147,6 +146,13 @@ Then link `output.css` in `<head>` instead of the CDN script.
 - Add a privacy policy page, particularly since the contact form collects personal data.
 - Consider a custom 404 page on Cloudflare Pages.
 - Optimize the Tailwind delivery (see above) and add a `robots.txt` / `sitemap.xml`.
+
+---
+
+## Changelog
+
+- **2026-10-29** — Removed the `CNAME` file; the custom domain is now managed entirely through Cloudflare DNS. Added this README.
+- **2026-10-29** — Replaced the original `page/page.html` with a redesigned root `index.html` (dark theme, services grid, Web3Forms contact form).
 
 ---
 
