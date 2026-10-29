@@ -37,6 +37,7 @@ No JavaScript is authored in this project. The only script tag loads Tailwind at
 ```
 PlateauITSite/
 ├── index.html   # The entire website (markup + Tailwind classes)
+├── LICENSE      # Proprietary license — all rights reserved
 └── README.md
 ```
 
@@ -151,6 +152,7 @@ Then link `output.css` in `<head>` instead of the CDN script.
 
 ## Changelog
 
+- **2026-10-29** — Added a proprietary `LICENSE` (all rights reserved).
 - **2026-10-29** — Removed the `CNAME` file; the custom domain is now managed entirely through Cloudflare DNS. Added this README.
 - **2026-10-29** — Replaced the original `page/page.html` with a redesigned root `index.html` (dark theme, services grid, Web3Forms contact form).
 
@@ -160,4 +162,4 @@ Then link `output.css` in `<head>` instead of the CDN script.
 
 - **GitHub:** [github.com/BWinans/PlateauITSite](https://github.com/BWinans/PlateauITSite)
 - **Branch:** `main`
-- **License:** All rights reserved. This is a proprietary business website; the content and branding belong to PlateauIT LLC.
+- **License:** Proprietary — all rights reserved by PlateauIT LLC. See [LICENSE](LICENSE) for terms.
