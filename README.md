@@ -37,6 +37,7 @@ JavaScript use is minimal: Tailwind loads at runtime, Web3Forms loads hCaptcha, 
 
 ```
 PlateauITSite/
+├── favicon.png  # Site icon (38×38 PNG)
 ├── index.html   # The entire website (markup + Tailwind classes)
 ├── LICENSE      # Proprietary license — all rights reserved
 └── README.md
@@ -167,7 +168,7 @@ Then link `output.css` in `<head>` instead of the CDN script.
 ## Suggested Improvements
 
 - Add `<meta name="description">` and Open Graph / Twitter card tags for better search and social previews.
-- Add a favicon and `apple-touch-icon`.
+- Provide larger favicon sizes (32×32, 180×180, and `.ico`) for crisper rendering across devices.
 - Add structured data (`LocalBusiness` JSON-LD) to improve local SEO for "Winslow IT support".
 - Surface a phone number and email prominently — many local service customers prefer calling.
 - Add a privacy policy page, particularly since the contact form collects personal data.
@@ -178,6 +179,7 @@ Then link `output.css` in `<head>` instead of the CDN script.
 
 ## Changelog
 
+- **2026-10-30** — Added the PlateauIT favicon (`favicon.png`) and linked it as the site and Apple touch icon.
 - **2026-10-30** — Added hCaptcha spam protection to the contact form (Web3Forms integration plus client-side validation).
 - **2026-10-29** — Added a proprietary `LICENSE` (all rights reserved).
 - **2026-10-29** — Removed the `CNAME` file; the custom domain is now managed entirely through Cloudflare DNS. Added this README.
