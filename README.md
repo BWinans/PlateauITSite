@@ -54,6 +54,7 @@ PlateauITSite/
 ├── favicon.png            # Site icon (38×38 PNG)
 ├── index.html             # The entire website (markup + Tailwind classes)
 ├── LICENSE                # Proprietary license — all rights reserved
+├── .gitignore             # Local-only files and OS artifacts
 └── README.md
 ```
 

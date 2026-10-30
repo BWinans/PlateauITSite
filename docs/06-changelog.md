@@ -6,6 +6,7 @@ Notable changes to the PlateauIT website, newest first.
 
 ## 2026-10-30
 
+- Added a `.gitignore` for local-only files and OS artifacts.
 - Re-themed the site with a desert palette (`stone` neutrals, `amber` accents, sunset gradient bar, and a warm hero glow).
 - Added the PlateauIT favicon (`favicon.png`) and linked it as the site and Apple touch icon.
 - Added hCaptcha spam protection to the contact form (Web3Forms integration plus client-side validation).

@@ -1,0 +1,11 @@
+# Local agent instructions — never publish
+AGENTS.md
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor/OS temp files
+*.swp
+*~
