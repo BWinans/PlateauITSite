@@ -2,14 +2,36 @@
 
 [← Previous: Contact Form](03-contact-form.md) · [Back to README](../README.md) · [Next: Roadmap →](05-roadmap.md)
 
-Everything lives in `index.html`; edit it and redeploy.
+The site is split across four pages, all hand-written:
+
+| Page | Edit here for… |
+| --- | --- |
+| `index.html` | Hero copy, featured services, managed-support teaser |
+| `services.html` | Service categories, deliverables, starting rates |
+| `pricing.html` | Package tiers, labor rates, billing policies |
+| `contact.html` | Form fields, service area, hours, response info |
+
+Each page carries its own copy of the header and footer markup. When you change navigation or footer links, update **all four files**.
 
 ## Content
 
-- **Copy / headline** — update text inside the `<h1>` and `<p>` tags in the Hero section.
-- **Services** — duplicate or edit the three `<div>` cards in the `#services` section. Keep the `NN / LABEL` eyebrow pattern consistent.
-- **Contact details** — add a phone number, email address, or business address near the form or in the footer.
+- **Copy / headline** — update text inside the `<h1>` and `<p>` tags in the hero sections.
+- **Services** — edit the `<article>` cards in `services.html`; the home page shows a three-card preview. Keep the `NN / LABEL` eyebrow pattern consistent.
+- **Pricing** — update the package cards and rate table in `pricing.html`.
+- **Contact details** — add a phone number, email address, or business address in `contact.html` or the footer.
 - **Form fields** — add inputs with a `name` attribute; Web3Forms forwards every field to the email.
+
+## Navigation
+
+The header contains two nav blocks: one for desktop (`hidden md:flex`) and one for mobile (`md:hidden`). The current page is marked by swapping `text-stone-300` for `text-amber-400` on its link. Remember to update both blocks and all four pages.
+
+## Adding a page
+
+1. Copy an existing page (e.g. `services.html`) as a starting point.
+2. Update `<title>`, the meta description, and the `<h1>`.
+3. Set the active nav link in both header nav blocks and the footer.
+4. Add the new page to the nav on **every** page.
+5. Update the page table in `README.md`, `docs/01-getting-started.md`, and the changelog.
 
 ## Colors
 

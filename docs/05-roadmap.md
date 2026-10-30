@@ -6,7 +6,7 @@ Suggested improvements, roughly in priority order.
 
 ## SEO & Discoverability
 
-- Add `<meta name="description">` and Open Graph / Twitter card tags for better search and social previews.
+- Add Open Graph / Twitter card tags for better social previews (page descriptions are already in place).
 - Add structured data (`LocalBusiness` JSON-LD) to improve local SEO for "Winslow IT support".
 - Add a `robots.txt` and `sitemap.xml`.
 
@@ -25,6 +25,7 @@ Suggested improvements, roughly in priority order.
 
 - Consider a custom 404 page on Cloudflare Pages.
 - Add a `noindex` or redirect for repository files (e.g. `README.md`) that are published alongside the site.
+- Reduce duplicated header/footer markup across the four pages — either with a tiny build step or a shared JS include.
 
 ---
 

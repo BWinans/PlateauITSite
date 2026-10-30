@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | PlateauIT LLC</title>
+    <meta name="description" content="Request on-site IT support, a network assessment, or a managed support quote in Winslow and Northern Arizona.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-stone-900 text-stone-100 font-sans antialiased selection:bg-amber-500 selection:text-stone-950">
+
+    <!-- Desert sunset accent -->
+    <div class="h-1 bg-gradient-to-r from-amber-800 via-orange-500 to-amber-400"></div>
+
+    <!-- Header Navigation -->
+    <header class="border-b border-stone-800 bg-stone-900/90 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center gap-4">
+            <a href="index.html" class="text-2xl font-bold tracking-tight text-amber-400">Plateau<span class="text-stone-100">IT</span> <span class="text-xs text-stone-500 font-mono">LLC</span></a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="services.html" class="text-stone-300 hover:text-amber-400 transition">Services</a>
+                <a href="pricing.html" class="text-stone-300 hover:text-amber-400 transition">Pricing</a>
+                <a href="contact.html" class="text-amber-400">Contact</a>
+            </nav>
+            <a href="contact.html" class="bg-amber-500 hover:bg-amber-400 text-stone-950 font-semibold px-4 py-2 rounded-lg transition">Request Support</a>
+        </div>
+        <div class="md:hidden border-t border-stone-800">
+            <nav class="max-w-6xl mx-auto px-6 py-3 flex justify-center gap-8 text-sm font-medium">
+                <a href="services.html" class="text-stone-300 hover:text-amber-400 transition">Services</a>
+                <a href="pricing.html" class="text-stone-300 hover:text-amber-400 transition">Pricing</a>
+                <a href="contact.html" class="text-amber-400">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-[radial-gradient(ellipse_at_top,rgba(217,119,6,0.18),transparent_65%)]">
+        <div class="max-w-6xl mx-auto px-6 py-16 text-center">
+            <div class="inline-block px-3 py-1 bg-amber-950/60 text-amber-400 text-xs font-semibold rounded-full border border-amber-800/60 mb-4">
+                Serving Winslow &amp; Northern Arizona
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-stone-50 leading-tight">Contact PlateauIT</h1>
+            <p class="mt-4 text-xl text-stone-400 max-w-2xl mx-auto">Send a brief note below to get in touch or request service. We'll follow up to schedule a site assessment.</p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-10">
+
+        <!-- Details -->
+        <div class="md:col-span-1 space-y-6">
+            <div>
+                <h2 class="text-lg font-bold text-stone-50 mb-2">Service Area</h2>
+                <p class="text-sm text-stone-400">Winslow, Flagstaff, and surrounding Northern Arizona communities. Travel beyond 30 miles is billed at standard portal-to-portal rates.</p>
+            </div>
+            <div>
+                <h2 class="text-lg font-bold text-stone-50 mb-2">Hours</h2>
+                <p class="text-sm text-stone-400">Standard business hours are Monday–Friday, 8:00 AM – 5:00 PM. Emergency and after-hours dispatch is available at the emergency rate.</p>
+            </div>
+            <div>
+                <h2 class="text-lg font-bold text-stone-50 mb-2">Response</h2>
+                <p class="text-sm text-stone-400">Most inquiries receive a reply within one business day. Managed clients get priority dispatch windows and SLA-backed response times.</p>
+            </div>
+            <div class="bg-stone-800/60 p-5 rounded-xl border border-stone-700/70">
+                <h2 class="text-sm font-bold text-stone-100 mb-1">Prefer to talk?</h2>
+                <p class="text-sm text-stone-400">Include your phone number in the message and we'll call you back.</p>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <div class="md:col-span-2">
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-4 bg-stone-800/40 p-8 rounded-2xl border border-stone-700/60">
+                <input type="hidden" name="access_key" value="1c1ed5c6-3e30-45e1-8ea7-b1e0006dca42">
+                <input type="hidden" name="subject" value="New Inquiry from PlateauIT.com">
+
+                <div>
+                    <label for="name" class="block text-sm font-medium text-stone-300 mb-1">Your Name / Business</label>
+                    <input id="name" type="text" name="name" required placeholder="John Doe" class="w-full p-3 bg-stone-900 border border-stone-700 rounded-lg text-stone-100 placeholder-stone-600 focus:outline-none focus:border-amber-500">
+                </div>
+
+                <div>
+                    <label for="email" class="block text-sm font-medium text-stone-300 mb-1">Email Address</label>
+                    <input id="email" type="email" name="email" required placeholder="name@example.com" class="w-full p-3 bg-stone-900 border border-stone-700 rounded-lg text-stone-100 placeholder-stone-600 focus:outline-none focus:border-amber-500">
+                </div>
+
+                <div>
+                    <label for="message" class="block text-sm font-medium text-stone-300 mb-1">How can we help?</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Tell us about your IT setup or issue..." class="w-full p-3 bg-stone-900 border border-stone-700 rounded-lg text-stone-100 placeholder-stone-600 focus:outline-none focus:border-amber-500"></textarea>
+                </div>
+
+                <!-- hCaptcha (handled by Web3Forms) -->
+                <div class="h-captcha" data-captcha="true" data-theme="dark"></div>
+
+                <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold py-3 rounded-lg transition">Submit Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-stone-800 py-10 text-sm">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-stone-500">
+            <p>&copy; 2026 PlateauIT LLC. All rights reserved. Northern Arizona.</p>
+            <nav class="flex gap-6">
+                <a href="services.html" class="hover:text-amber-400 transition">Services</a>
+                <a href="pricing.html" class="hover:text-amber-400 transition">Pricing</a>
+                <a href="contact.html" class="hover:text-amber-400 transition">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Web3Forms client script (loads hCaptcha) -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+
+    <!-- Prevent submission until the hCaptcha challenge is completed -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            const hCaptchaResponse = this.querySelector('textarea[name="h-captcha-response"]');
+
+            if (!hCaptchaResponse || !hCaptchaResponse.value.trim()) {
+                e.preventDefault();
+                alert('Please complete the captcha before submitting.');
+            }
+        });
+    </script>
+
+</body>
+</html>

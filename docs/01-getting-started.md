@@ -36,12 +36,22 @@ Then visit [http://localhost:8000](http://localhost:8000).
 PlateauITSite/
 ├── docs/                  # Documentation pages
 ├── favicon.png            # Site icon (38×38 PNG)
-├── index.html             # The entire website (markup + Tailwind classes)
+├── index.html             # Home page
+├── services.html          # Service catalog and starting rates
+├── pricing.html           # Managed packages and labor/billing rates
+├── contact.html           # Contact form and service-area details
 ├── LICENSE                # Proprietary license — all rights reserved
 └── README.md
 ```
 
-Everything on the page lives in `index.html`: markup, Tailwind utility classes, the contact form, and the small inline validation script.
+The site is split into four hand-written pages. Each page contains a full copy of the header and footer markup, so navigation changes must be applied to all four files.
+
+| Page | Purpose |
+| --- | --- |
+| `index.html` | Hero, three featured services, managed-support teaser |
+| `services.html` | All five service categories with deliverables and starting rates |
+| `pricing.html` | Managed support packages, labor rates, billing policies |
+| `contact.html` | Contact form, service area, hours, response expectations |
 
 ## A note on `CNAME`
 

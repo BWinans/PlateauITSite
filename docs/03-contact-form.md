@@ -2,7 +2,7 @@
 
 [← Previous: Deployment](02-deployment.md) · [Back to README](../README.md) · [Next: Customization →](04-customization.md)
 
-The form in `index.html` posts to `https://api.web3forms.com/submit`:
+The form on [`contact.html`](../contact.html) posts to `https://api.web3forms.com/submit`:
 
 ```html
 <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">

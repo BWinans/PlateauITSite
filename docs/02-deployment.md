@@ -27,6 +27,7 @@ Pushing to `main` triggers a new deployment. Changes are live once Cloudflare fi
 
 - No `CNAME` file is required in the repository — the custom domain is configured in the Cloudflare dashboard.
 - Because the build output directory is the repository root, files such as `README.md` and `LICENSE` are technically published too. This is harmless, but they can be excluded with a `_redirects` rule or by moving site assets into a subfolder if that ever matters.
+- All four HTML pages are served from the root and linked with relative URLs, so no routing rules are required. Cloudflare serves `/services.html`, `/pricing.html`, and `/contact.html` directly.
 
 ---
 

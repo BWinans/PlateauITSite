@@ -8,14 +8,16 @@ The official marketing site for **PlateauIT LLC**, an on-site IT support and net
 
 ## Overview
 
-A single-page, fully static website. There is no framework, build step, package manager, or backend — just one self-contained `index.html` file styled with the Tailwind CSS CDN and deployed to Cloudflare.
+A fully static, multi-page marketing site. There is no framework, build step, package manager, or backend — just hand-written HTML files styled with the Tailwind CSS CDN and deployed to Cloudflare.
 
-| Section | Content |
+| Page | Content |
 | --- | --- |
-| **Header** | Sticky navigation with the PlateauIT wordmark and a "Request Support" call-to-action |
-| **Hero** | Headline, service-area badge, and primary CTAs |
-| **Services** | Three cards: Network & Wi-Fi Systems, Storage & Samba Servers, Systems Administration |
-| **Contact** | Web3Forms-powered inquiry form (name, email, message) with hCaptcha |
+| [`index.html`](index.html) | Hero, three featured services, and a managed-support teaser |
+| [`services.html`](services.html) | All five service categories with deliverables and starting rates |
+| [`pricing.html`](pricing.html) | Managed support packages, labor rates, and billing policies |
+| [`contact.html`](contact.html) | Web3Forms inquiry form (name, email, message) with hCaptcha |
+
+Every page shares the same sticky header, mobile navigation, footer, favicon, and desert theme.
 
 ---
 
@@ -52,7 +54,10 @@ A full index of the docs folder is also available at [`docs/README.md`](docs/REA
 PlateauITSite/
 ├── docs/                  # Documentation pages (see index above)
 ├── favicon.png            # Site icon (38×38 PNG)
-├── index.html             # The entire website (markup + Tailwind classes)
+├── index.html             # Home page
+├── services.html          # Service catalog and starting rates
+├── pricing.html           # Managed packages and labor/billing rates
+├── contact.html           # Contact form and service-area details
 ├── LICENSE                # Proprietary license — all rights reserved
 ├── .gitignore             # Local-only files and OS artifacts
 └── README.md

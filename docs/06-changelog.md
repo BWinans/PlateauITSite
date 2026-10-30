@@ -6,6 +6,8 @@ Notable changes to the PlateauIT website, newest first.
 
 ## 2026-10-30
 
+- Split the site into four pages: home, services, pricing, and contact.
+- Added the full service catalog with deliverables and starting rates, managed support packages, and labor/billing terms sourced from the PlateauIT rate sheet.
 - Added a `.gitignore` for local-only files and OS artifacts.
 - Re-themed the site with a desert palette (`stone` neutrals, `amber` accents, sunset gradient bar, and a warm hero glow).
 - Added the PlateauIT favicon (`favicon.png`) and linked it as the site and Apple touch icon.
