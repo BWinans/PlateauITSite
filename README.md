@@ -150,7 +150,7 @@ Everything lives in `index.html`; edit it and redeploy.
 - **Copy / headline** — update text inside the `<h1>` and `<p>` tags in the Hero section.
 - **Services** — duplicate or edit the three `<div>` cards in the `#services` section. Keep the `NN / LABEL` eyebrow pattern consistent.
 - **Contact details** — add a phone number, email address, or business address near the form or in the footer.
-- **Colors** — the palette uses Tailwind's `slate` (backgrounds/text) and `cyan` (accents). Swap `cyan-*` classes for another hue to rebrand.
+- **Colors** — the palette uses Tailwind's `stone` (warm sandstone backgrounds/text) and `amber` (sunset-yellow accents), plus a thin amber-to-orange gradient bar and a soft radial glow in the hero. Swap `amber-*` classes for another hue to rebrand.
 - **Form fields** — add inputs with a `name` attribute; Web3Forms forwards every field to the email.
 
 ### Production note on Tailwind
@@ -179,6 +179,7 @@ Then link `output.css` in `<head>` instead of the CDN script.
 
 ## Changelog
 
+- **2026-10-30** — Re-themed the site with a desert palette (`stone` neutrals, `amber` accents, sunset gradient bar, and a warm hero glow).
 - **2026-10-30** — Added the PlateauIT favicon (`favicon.png`) and linked it as the site and Apple touch icon.
 - **2026-10-30** — Added hCaptcha spam protection to the contact form (Web3Forms integration plus client-side validation).
 - **2026-10-29** — Added a proprietary `LICENSE` (all rights reserved).
