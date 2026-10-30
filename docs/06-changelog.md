@@ -6,6 +6,7 @@ Notable changes to the PlateauIT website, newest first.
 
 ## 2026-10-30
 
+- Clarified Winslow as the primary service area; Flagstaff (~50 miles) is now explicitly listed as billable travel.
 - Split the site into four pages: home, services, pricing, and contact.
 - Added the full service catalog with deliverables and starting rates, managed support packages, and labor/billing terms sourced from the PlateauIT rate sheet.
 - Added a `.gitignore` for local-only files and OS artifacts.
