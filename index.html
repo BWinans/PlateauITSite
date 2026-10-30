@@ -71,7 +71,7 @@
         <h2 class="text-3xl font-bold text-center mb-2 text-white">Contact PlateauIT</h2>
         <p class="text-slate-400 text-center mb-8">Send a brief note below to get in touch or request service.</p>
 
-        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4 bg-slate-800/40 p-8 rounded-2xl border border-slate-800">
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-4 bg-slate-800/40 p-8 rounded-2xl border border-slate-800">
             <input type="hidden" name="access_key" value="1c1ed5c6-3e30-45e1-8ea7-b1e0006dca42">
             <input type="hidden" name="subject" value="New Inquiry from PlateauIT.com">
             
@@ -90,6 +90,9 @@
                 <textarea name="message" rows="4" required placeholder="Tell us about your IT setup or issue..." class="w-full p-3 bg-slate-900 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"></textarea>
             </div>
 
+            <!-- hCaptcha (handled by Web3Forms) -->
+            <div class="h-captcha" data-captcha="true" data-theme="dark"></div>
+
             <button type="submit" class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold py-3 rounded-lg transition">Submit Message</button>
         </form>
     </section>
@@ -98,6 +101,21 @@
     <footer class="border-t border-slate-800 py-8 text-center text-slate-500 text-sm">
         <p>&copy; 2026 PlateauIT LLC. All rights reserved. Northern Arizona.</p>
     </footer>
+
+    <!-- Web3Forms client script (loads hCaptcha) -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+
+    <!-- Prevent submission until the hCaptcha challenge is completed -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            const hCaptchaResponse = this.querySelector('textarea[name="h-captcha-response"]');
+
+            if (!hCaptchaResponse || !hCaptchaResponse.value.trim()) {
+                e.preventDefault();
+                alert('Please complete the captcha before submitting.');
+            }
+        });
+    </script>
 
 </body>
 </html>

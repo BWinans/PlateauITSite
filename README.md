@@ -17,7 +17,7 @@ The page is organized into four sections:
 | **Header** | Sticky navigation with the PlateauIT wordmark and a "Request Support" call-to-action |
 | **Hero** | Headline, service-area badge, and primary CTAs |
 | **Services** | Three cards: Network & Wi-Fi Systems, Storage & Samba Servers, Systems Administration |
-| **Contact** | Web3Forms-powered inquiry form (name, email, message) |
+| **Contact** | Web3Forms-powered inquiry form (name, email, message) with hCaptcha |
 
 ---
 
@@ -26,9 +26,10 @@ The page is organized into four sections:
 - **HTML5** — semantic, single-file layout
 - **Tailwind CSS** (CDN: `cdn.tailwindcss.com`) — utility-first styling, no compiled stylesheet
 - **Web3Forms** — serverless form submission endpoint
+- **hCaptcha** — spam protection on the contact form, loaded via the Web3Forms client script
 - **Cloudflare** — hosting, CDN, TLS, and DNS for `plateauit.com`
 
-No JavaScript is authored in this project. The only script tag loads Tailwind at runtime.
+JavaScript use is minimal: Tailwind loads at runtime, Web3Forms loads hCaptcha, and a short inline script blocks form submission until the captcha is solved.
 
 ---
 
@@ -101,18 +102,43 @@ Pushing to `main` triggers a new deployment. Changes are live once Cloudflare fi
 The form in `index.html` posts to `https://api.web3forms.com/submit`:
 
 ```html
-<form action="https://api.web3forms.com/submit" method="POST">
+<form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
     <input type="hidden" name="access_key" value="...">
     <input type="hidden" name="subject" value="New Inquiry from PlateauIT.com">
     ...
+    <div class="h-captcha" data-captcha="true" data-theme="dark"></div>
 </form>
+
+<script src="https://web3forms.com/client/script.js" async defer></script>
 ```
 
 Submissions are emailed to the address associated with the Web3Forms access key.
 
 **About the access key:** Web3Forms access keys are designed to be public — they identify the destination inbox, not authorize an account. They are safe to commit. If the inbox changes or the key is abused, generate a new key in the Web3Forms dashboard and update the hidden input.
 
-Web3Forms also supports optional spam protection (honeypot fields, reCAPTCHA, or hCaptcha), which can be added to the form if unwanted submissions become an issue.
+### hCaptcha
+
+The form is protected by **hCaptcha**, using Web3Forms' zero-config integration — no hCaptcha account, site key, or secret key is required. Two pieces make it work:
+
+1. The `<div class="h-captcha" data-captcha="true" data-theme="dark">` placeholder inside the form.
+2. The `<script src="https://web3forms.com/client/script.js" async defer>` tag before `</body>`, which renders the widget and injects the `h-captcha-response` field.
+
+An inline script also validates the challenge client-side before allowing submission:
+
+```js
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+    const hCaptchaResponse = this.querySelector('textarea[name="h-captcha-response"]');
+
+    if (!hCaptchaResponse || !hCaptchaResponse.value.trim()) {
+        e.preventDefault();
+        alert('Please complete the captcha before submitting.');
+    }
+});
+```
+
+> **Required dashboard step:** hCaptcha must also be enabled for the form at [app.web3forms.com](https://app.web3forms.com) (open the form → spam protection settings → select hCaptcha). Without that, the widget renders but submissions are not actually verified.
+
+`data-theme="dark"` matches the site's dark palette; other hCaptcha options can be passed as `data-*` attributes (for example `data-lang="es"` or `data-size="compact"`).
 
 ---
 
@@ -152,6 +178,7 @@ Then link `output.css` in `<head>` instead of the CDN script.
 
 ## Changelog
 
+- **2026-10-30** — Added hCaptcha spam protection to the contact form (Web3Forms integration plus client-side validation).
 - **2026-10-29** — Added a proprietary `LICENSE` (all rights reserved).
 - **2026-10-29** — Removed the `CNAME` file; the custom domain is now managed entirely through Cloudflare DNS. Added this README.
 - **2026-10-29** — Replaced the original `page/page.html` with a redesigned root `index.html` (dark theme, services grid, Web3Forms contact form).
