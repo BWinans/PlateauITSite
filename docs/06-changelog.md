@@ -6,6 +6,7 @@ Notable changes to the PlateauIT website, newest first.
 
 ## 2026-10-30
 
+- Added the PlateauIT mesa logo to the header, footer, and home hero (`logo-amber.png`).
 - Removed em dashes across the site, README, and docs; replaced them with commas, colons, semicolons, and parentheses.
 - Clarified Winslow as the primary service area; Flagstaff (~50 miles) is now explicitly listed as billable travel.
 - Split the site into four pages: home, services, pricing, and contact.

@@ -33,6 +33,12 @@ The header contains two nav blocks: one for desktop (`hidden md:flex`) and one f
 4. Add the new page to the nav on **every** page.
 5. Update the page table in `README.md`, `docs/01-getting-started.md`, and the changelog.
 
+## Logo
+
+- `logo.png` is the original black mesa logo and is kept as the source asset.
+- `logo-amber.png` is a recolored copy for the dark theme and is used in the header, footer, and home hero.
+- If the logo changes, replace `logo.png`, then regenerate `logo-amber.png` by setting every opaque pixel to amber (`#fbbf24`) while preserving the alpha channel.
+
 ## Colors
 
 The palette uses Tailwind's `stone` (warm sandstone backgrounds/text) and `amber` (sunset-yellow accents), plus a thin amber-to-orange gradient bar and a soft radial glow in the hero.

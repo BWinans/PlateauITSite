@@ -54,6 +54,8 @@ A full index of the docs folder is also available at [`docs/README.md`](docs/REA
 PlateauITSite/
 ├── docs/                  # Documentation pages (see index above)
 ├── favicon.png            # Site icon (38×38 PNG)
+├── logo.png               # Original black logo (source asset)
+├── logo-amber.png         # Amber logo used on the dark theme
 ├── index.html             # Home page
 ├── services.html          # Service catalog and starting rates
 ├── pricing.html           # Managed packages and labor/billing rates

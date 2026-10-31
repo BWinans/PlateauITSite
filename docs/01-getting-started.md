@@ -36,6 +36,8 @@ Then visit [http://localhost:8000](http://localhost:8000).
 PlateauITSite/
 ├── docs/                  # Documentation pages
 ├── favicon.png            # Site icon (38×38 PNG)
+├── logo.png               # Original black logo (source asset)
+├── logo-amber.png         # Amber logo used on the dark theme
 ├── index.html             # Home page
 ├── services.html          # Service catalog and starting rates
 ├── pricing.html           # Managed packages and labor/billing rates
