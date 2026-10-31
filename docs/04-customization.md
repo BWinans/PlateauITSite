@@ -15,11 +15,11 @@ Each page carries its own copy of the header and footer markup. When you change 
 
 ## Content
 
-- **Copy / headline** — update text inside the `<h1>` and `<p>` tags in the hero sections.
-- **Services** — edit the `<article>` cards in `services.html`; the home page shows a three-card preview. Keep the `NN / LABEL` eyebrow pattern consistent.
-- **Pricing** — update the package cards and rate table in `pricing.html`.
-- **Contact details** — add a phone number, email address, or business address in `contact.html` or the footer.
-- **Form fields** — add inputs with a `name` attribute; Web3Forms forwards every field to the email.
+- **Copy / headline**: update text inside the `<h1>` and `<p>` tags in the hero sections.
+- **Services**: edit the `<article>` cards in `services.html`; the home page shows a three-card preview. Keep the `NN / LABEL` eyebrow pattern consistent.
+- **Pricing**: update the package cards and rate table in `pricing.html`.
+- **Contact details**: add a phone number, email address, or business address in `contact.html` or the footer.
+- **Form fields**: add inputs with a `name` attribute; Web3Forms forwards every field to the email.
 
 ## Navigation
 

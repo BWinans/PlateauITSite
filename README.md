@@ -8,7 +8,7 @@ The official marketing site for **PlateauIT LLC**, an on-site IT support and net
 
 ## Overview
 
-A fully static, multi-page marketing site. There is no framework, build step, package manager, or backend — just hand-written HTML files styled with the Tailwind CSS CDN and deployed to Cloudflare.
+A fully static, multi-page marketing site. There is no framework, build step, package manager, or backend: just hand-written HTML files styled with the Tailwind CSS CDN and deployed to Cloudflare.
 
 | Page | Content |
 | --- | --- |
@@ -23,11 +23,11 @@ Every page shares the same sticky header, mobile navigation, footer, favicon, an
 
 ## Tech Stack
 
-- **HTML5** — semantic, single-file layout
-- **Tailwind CSS** (CDN: `cdn.tailwindcss.com`) — utility-first styling, no compiled stylesheet
-- **Web3Forms** — serverless form submission endpoint
-- **hCaptcha** — spam protection on the contact form, loaded via the Web3Forms client script
-- **Cloudflare** — hosting, CDN, TLS, and DNS for `plateauit.com`
+- **HTML5**: semantic, multi-page static layout
+- **Tailwind CSS** (CDN: `cdn.tailwindcss.com`): utility-first styling, no compiled stylesheet
+- **Web3Forms**: serverless form submission endpoint
+- **hCaptcha**: spam protection on the contact form, loaded via the Web3Forms client script
+- **Cloudflare**: hosting, CDN, TLS, and DNS for `plateauit.com`
 
 JavaScript use is minimal: Tailwind loads at runtime, Web3Forms loads hCaptcha, and a short inline script blocks form submission until the captcha is solved.
 
@@ -58,7 +58,7 @@ PlateauITSite/
 ├── services.html          # Service catalog and starting rates
 ├── pricing.html           # Managed packages and labor/billing rates
 ├── contact.html           # Contact form and service-area details
-├── LICENSE                # Proprietary license — all rights reserved
+├── LICENSE                # Proprietary license (all rights reserved)
 ├── .gitignore             # Local-only files and OS artifacts
 └── README.md
 ```
@@ -67,4 +67,4 @@ PlateauITSite/
 
 ## License
 
-Proprietary — all rights reserved by PlateauIT LLC. See [LICENSE](LICENSE) for terms.
+Proprietary. All rights reserved by PlateauIT LLC. See [LICENSE](LICENSE) for terms.

@@ -19,11 +19,11 @@ Submissions are emailed to the address associated with the Web3Forms access key.
 
 ## About the access key
 
-Web3Forms access keys are designed to be public — they identify the destination inbox, not authorize an account. They are safe to commit. If the inbox changes or the key is abused, generate a new key in the Web3Forms dashboard and update the hidden input.
+Web3Forms access keys are designed to be public: they identify the destination inbox, not authorize an account. They are safe to commit. If the inbox changes or the key is abused, generate a new key in the Web3Forms dashboard and update the hidden input.
 
 ## hCaptcha
 
-The form is protected by **hCaptcha**, using Web3Forms' zero-config integration — no hCaptcha account, site key, or secret key is required. Two pieces make it work:
+The form is protected by **hCaptcha**, using Web3Forms' zero-config integration, so no hCaptcha account, site key, or secret key is required. Two pieces make it work:
 
 1. The `<div class="h-captcha" data-captcha="true" data-theme="dark">` placeholder inside the form.
 2. The `<script src="https://web3forms.com/client/script.js" async defer>` tag before `</body>`, which renders the widget and injects the `h-captcha-response` field.
@@ -51,7 +51,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
 | --- | --- |
 | Widget does not appear | Web3Forms client script blocked or not loaded |
 | Widget appears but submissions fail | hCaptcha not enabled in the Web3Forms dashboard |
-| "Please complete the captcha" alert loops | `h-captcha-response` field missing — check the client script tag |
+| "Please complete the captcha" alert loops | `h-captcha-response` field missing; check the client script tag |
 | No email received | Wrong access key, or delivery filtered as spam |
 
 ---

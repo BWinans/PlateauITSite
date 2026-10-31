@@ -4,17 +4,17 @@
 
 ## Requirements
 
-None. The site is pure static HTML — there is nothing to install, compile, or configure.
+None. The site is pure static HTML: there is nothing to install, compile, or configure.
 
 An internet connection is needed so the Tailwind CDN can load.
 
 ## Local Development
 
-**Option 1 — Open the file directly**
+**Option 1: Open the file directly**
 
 Open `index.html` in any modern browser.
 
-**Option 2 — Serve locally (recommended)**
+**Option 2: Serve locally (recommended)**
 
 Serving over HTTP more closely matches production behavior:
 
@@ -40,7 +40,7 @@ PlateauITSite/
 ├── services.html          # Service catalog and starting rates
 ├── pricing.html           # Managed packages and labor/billing rates
 ├── contact.html           # Contact form and service-area details
-├── LICENSE                # Proprietary license — all rights reserved
+├── LICENSE                # Proprietary license (all rights reserved)
 └── README.md
 ```
 
